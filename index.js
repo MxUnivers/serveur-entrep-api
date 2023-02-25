@@ -66,7 +66,8 @@ app.post("/uploadImage", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send({
-    article:"Application démaré avec succès "
+    article:"Serveur a demaréer avec succès ",
+    article:"api-de-l'entreprise"
   });
   console.log("api vu ...")
 });
