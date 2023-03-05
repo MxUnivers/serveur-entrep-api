@@ -5,9 +5,6 @@
 =======
 # starter-express-api
 
-https://camo.githubusercontent.com/9c27ca7ef5947882143d1c04145ac1341dc7088b908d07bcbceab3c240d0456a/68747470733a2f2f6465706c6f792e6379636c69632e6170702f627574746f6e2e737667
-
-
 This is the simplest possible nodejs api using express that responds to any request with: 
 ```
 Yo!

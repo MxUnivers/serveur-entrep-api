@@ -23,10 +23,10 @@ const  serviceroute =  require("./routes/serviceRoute");
 const  messageroute =  require("./routes/messageRoute");
 const  parameteroute =  require("./routes/parameterRoute");
 const  temoinroute =  require("./routes/temoinRoute");
+const  solutionroute = require("./routes/solutionRoute");
 
 
-
-// connection a la base données
+// connection à la base données
 const LanchMogoDb = require("./utils/ConnectMongodb");
 LanchMogoDb();
 
@@ -51,7 +51,7 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST ');
   res.setHeader('Authorization','Bearer Sb5xnq9Gwe4mIlyucQJpi0lCoyn+faar5SRVzAFGDAqZbr6kRROW/');
   next();
-})
+});
 
 
 
@@ -66,8 +66,7 @@ app.post("/uploadImage", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send({
-    article:"Serveur a demaréer avec succès ",
-    article:"api-de-l'entreprise"
+    article:"Application démaré avec succès "
   });
   console.log("api vu ...")
 });
@@ -80,6 +79,7 @@ app.use("/api/v1/managers" ,managerroute );
 app.use("/api/v1/temoins" ,temoinroute );
 app.use("/api/v1/clients" ,clientroute);
 app.use("/api/v1/blog" ,blogroute);
+app.use("/api/v1/solution" ,solutionroute);
 app.use("/api/v1/service" ,serviceroute);
 app.use("/api/v1/message" ,messageroute);
 app.use("/api/v1/parameter" ,parameteroute);
